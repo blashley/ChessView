@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+    chessview:
+      image: chessview:latest
+      command: sh -c "jupyter lab --ip=0.0.0.0 --no-browser --allow-root"
+      ports:
+        - 8888:8888
+      working_dir: /ChessView
+      volumes:
+        - ./:/ChessView
